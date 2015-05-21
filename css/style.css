@@ -2,7 +2,6 @@
  * Influenced by Eric Meyer's reset.css http://meyerweb.com/eric/tools/css/reset/
  * Normalize.css http://necolas.github.com/normalize.css/ */
 *, *:after, *:before {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -117,7 +116,6 @@ dfn {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
@@ -233,7 +231,8 @@ button[disabled], input[disabled] {
 input[type="checkbox"], input[type="radio"] {
   vertical-align: bottom;
   *vertical-align: baseline;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   padding: 0;
   *height: 14px;
   *width: 14px;
@@ -244,7 +243,6 @@ input[type="checkbox"], input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
