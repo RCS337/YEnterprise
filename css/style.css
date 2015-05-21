@@ -336,6 +336,12 @@ header#masthead {
   padding: 1em;
   color: #ffffff;
 }
+header#masthead h1 {
+  font-size: 1.3em;
+  margin: 0;
+  display: inline-block;
+  float: left;
+}
 header#masthead a:link, header#masthead a {
   display: block;
   color: #ffffff;
@@ -564,9 +570,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a:link, h1 a:link, h2 a:link, h3 a:link, h4 a:l
 }
 
 h1 {
-  font-size: 1.3em;
-  margin: 0;
-  display: inline-block;
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 h2 {
@@ -794,6 +799,7 @@ textarea {
     display: block;
     width: 100%;
     text-align: center;
+    float: none;
   }
 
   #nav-wrapper ul li a, li a:link {
