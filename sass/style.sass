@@ -1,0 +1,420 @@
+$sans          :Helvetica, Arial, sans-serif
+$serif         :Georgia, "Times New Roman", Times, serif
+$full-width    :1200px
+$aqua          :#7FDBFF
+$blue          :#0089BA
+$navy          :#005473
+$teal          :#39CCCC
+$green         :#50AA0B
+$olive         :#3D9970
+$lime          :#01FF70
+$yellow        :#FFDC00
+$orange        :#FF851B
+$red           :#FF4136
+$fuchsia       :#F012BE
+$purple        :#B10DC9
+$maroon        :#85144B
+$white         :#ffffff
+$silver        :#dddddd
+$gray          :#3c3c3c
+$black         :#2b2b2b
+
+// Get latest equalize.css @ https://github.com/bjutsu/EqualizeCSS
+@import equalize
+/* -----------------------------------------------------------------------------
+ *  CSS Toolbox
+ * ---------------------------------------------------------------------------*/
+
+.screen-reader-text
+    clip: rect(1px, 1px, 1px, 1px)
+    position: absolute
+.floatright
+    float: right
+    margin-left: 1em
+.floatleft
+    float: left
+    margin-right: 1em
+/* -----------------------------------------------------------------------------
+ *  STRUCTURE
+ * ---------------------------------------------------------------------------*/
+
+html
+    width: 100%
+body
+    font: normal normal normal 16px/1.625em $sans
+    width: 100%
+    background-color: #E5E5E5
+div.header-wrapper
+    width: 100%
+    background-color: #005473
+header#masthead
+    width: 100%
+    max-width: 1000px
+    margin: 0 auto
+    padding: 1em
+    color: #ffffff
+    a:link, a
+        display: block
+        color: #ffffff
+        padding: 0 .5em
+    i
+        margin-right: .5em
+    ul
+        display: block
+        float: right
+        li
+            display: inline-block
+            zoom: 1
+            *display: inline
+#page-wrapper
+    width: 100%
+    max-width: 1000px
+    padding: 0 1em
+    margin: 1em auto
+#nav-wrapper
+    width: 100%
+    margin: 0 auto
+    background-color: #005473
+    nav
+        display: block
+        width: 100%
+        max-width: 1000px
+        margin: 0 auto
+        padding: 0 1em
+    ul li
+        display: inline-block
+        margin: 0 .1em 0 0
+        zoom: 1
+        *display: inline
+        a, a:link
+            display: block
+            padding: .7em
+            color: #ffffff
+            background-color: #0089BA
+        a.active
+            background-color: #E5E5E5
+            color: $black
+
+.panel
+    background-color: #ffffff
+    border-radius: .25em
+    overflow: hidden
+.panel-heading
+    padding: 1em
+    background-color: #D5DEE3
+    h3
+        margin: 0
+        padding: 0
+        font-size: 1em
+        font-weight: normal
+.panel-body
+    padding: 1em
+    margin: 0
+
+.entry-header
+    display: table
+    padding: 1em
+    background-color: #D5DEE3
+    div
+        display: table-cell
+        &.date
+            width: 6em
+            text-align: center
+        &.admin
+            width: 8em
+            text-align: center
+    h3
+        font-size: 1em
+        font-weight: normal
+        padding: 0
+        margin: 0
+
+div.entry-header
+    width: 100%
+    h1
+        font-size: 1em
+        margin: 0
+        padding: 0
+div.entry-item
+    display: table
+    width: 100%
+    padding: 1em
+    div
+        display: table-cell
+        border: none
+        vertical-align: middle
+        // padding: .5em .5em 0
+        &.edit, &.delete
+            width: 4em
+            text-align: center
+        &.date
+            width: 6em
+            text-align: center
+    p
+        margin: 0
+        padding: 0
+    h1
+        font-size: 1em
+        margin: 0
+        padding: 0
+
+div.entry-item.odd
+    background-color: #EEEEEE
+
+
+
+/*------------------------------------------------------------------------------
+ *    LISTS
+ *----------------------------------------------------------------------------*/
+
+// Horizontal (inline) lists
+ul.horizontal li, ol.horizontal li
+    list-style: none inside
+    li
+        display: inline-block
+        zoom: 1
+        *display: inline
+ul
+    list-style: none inside
+ul.square
+    list-style: square inside
+    margin-bottom: 1.625em
+    li
+        margin-left: 1.625em
+        > ul
+            border-left: 1px solid
+            margin-bottom: 0
+ul.circle
+    list-style: circle inside
+    margin-bottom: 1.625em
+    li
+        margin-left: 1.625em
+        > ul
+            border-left: 1px solid
+            margin-bottom: 0
+ul.disc
+    list-style: disc inside
+    margin-bottom: 1.625em
+    li
+        margin-left: 1.625em
+        > ul
+            border-left: 1px solid
+            margin-bottom: 0
+
+/*------------------------------------------------------------------------------
+ *    IMAGES
+ *----------------------------------------------------------------------------*/
+
+figure
+    display: table
+    table-layout: fixed
+    margin: 0
+    img
+        display: block
+figcaption
+    display: table-caption
+    caption-side: bottom
+    font-family: $serif
+    font-size: .875em
+    font-style: italic
+    text-align: center
+    padding: 0 1em 1em
+
+/*------------------------------------------------------------------------------
+ *    TYPEOGRAPHY
+ *----------------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+    line-height: 1.1em
+    font-weight: 600
+    letter-spacing: +1px
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a:link, h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link
+    font-weight: inherit
+h1
+    font-size: 1.3em
+    margin: 0
+    display: inline-block
+h2
+    font-size: 1.5em
+    margin: 0.83em 0
+h3
+    font-size: 1.17em
+    margin: 1em 0
+h4
+    font-size: 1em
+    margin: 1.33em 0
+h5
+    font-size: 0.83em
+    margin: 1.67em 0
+h6
+    font-size: 0.67em
+    margin: 2.33em 0
+p
+    margin: 0 0 1.625em 0
+blockquote
+    width: 90%
+    font-family: $serif
+    font-size: 1.4em
+    line-height: 1.3em
+    font-style: italic
+    padding: .5em
+    margin: 0 auto
+    text-align: center
+    cite
+        display: block
+        margin-left: 1em
+        text-decoration: italic
+        font-weight: 300
+        font-size: .9em
+
+/*------------------------------------------------------------------------------
+ *    LINKS
+ *----------------------------------------------------------------------------*/
+
+a, a:link
+    text-decoration: none
+a:hover, a:focus
+    text-decoration: underline
+
+/*------------------------------------------------------------------------------
+ *    BUTTONS
+ *----------------------------------------------------------------------------*/
+
+button, input[type="submit"], input[type="reset"], input[type="button"], input[type="submit"]:link, input[type="reset"]:link, input[type="button"]:link, a.button, a.button:link
+    display: inline-block
+    background-color: $blue
+    color: $white
+    font-weight: normal
+    font-size: 1em
+    text-transform: uppercase
+    padding: .7em .75em .7em .75em
+    margin-bottom: 1em
+    text-align: center
+    white-space: nowrap
+    border-radius: 3px
+    line-height: 1em
+    border: none
+
+.button:hover, a.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover
+    text-decoration: none
+
+.button:focus, a.button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus
+    text-decoration: none
+
+/*------------------------------------------------------------------------------
+ *    FORMS
+ *----------------------------------------------------------------------------*/
+
+form
+    width: 100%
+    div.field-group
+        display: table
+        // table-layout: fixed
+        width: 100%
+        background-color: #EEEEEE
+        margin: 0 0 1em
+        padding: 1em
+        div
+            display: table-cell
+            vertical-align: top
+            &.label
+                padding-right: 1em
+                width: 15em
+            &.alert
+                padding-left: 1em
+                width: 6em
+    p.label
+        font-size: .8em
+        line-height: .8em
+        color: #b3b3b3
+        margin: 0
+        padding: 0
+.error
+    color: $red
+    font-size: .8em
+    margin: 0
+    display: none
+    float: right
+.error.visible
+    display: inline-block
+input[type="text"], input[type="number"], input[type="email"], input[type="tel"], input[type="date"], input[type="time"], input[type="radio"], input[type="password"], textarea, select
+    font-size: 1em
+    font-weight: 400
+    padding: .5em
+    margin: 0
+    width: 100%
+    border: 1px solid $silver
+textarea
+    height: 15em
+
+/*------------------------------------------------------------------------------
+ *   MEDIA QUERIES
+ *----------------------------------------------------------------------------*/
+@media only screen and (max-width: 768px)
+    form
+        width: 100%
+        div.field-group
+            display: block
+            div
+                display: block
+                &.label
+                    padding-right: 0
+                    width: 100%
+                    margin-bottom: 1em
+    div.entry-header
+        width: 100%
+        h1
+            font-size: 1em
+            margin: 0
+            padding: 0
+    div.entry-item
+        display: block
+        width: 100%
+        padding: 1em
+        div
+            display: block
+            border: none
+            vertical-align: middle
+            // padding: .5em .5em 0
+            &.edit, &.delete
+                width: 4em
+                text-align: right
+                float: right
+            &.date
+                width: 6em
+                text-align: left
+                float: left
+            &.entry
+                display: block
+                width: 100%
+                border-bottom: 1px solid $silver
+                padding-bottom: 1em
+                margin-bottom: 1em
+        p
+            margin: 0
+            padding: 0
+        h1
+            font-size: 1em
+            margin: 0
+            padding: 0
+
+@media only screen and (max-width: 500px)
+    header#masthead ul
+        display: block
+        float: none
+        margin: 1em auto
+        text-align: center
+        li
+            display: inline-block
+            zoom: 1
+            *display: inline
+    header#masthead h1
+        display: block
+        width: 100%
+        text-align: center
+    #nav-wrapper ul li a, li a:link
+        font-size: .9em
+        padding: .5em
+
+
+
