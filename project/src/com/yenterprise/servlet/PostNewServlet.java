@@ -14,7 +14,7 @@ import com.yenterprise.model.UserBean;
 import com.yenterprise.svc.PostService;
 
 
-@WebServlet("/PostNewServlet")
+@WebServlet("/newcomment")
 public class PostNewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private PostService service;
@@ -33,7 +33,7 @@ public class PostNewServlet extends HttpServlet {
 		}else{
 				
 			request.setAttribute("comment", "active");
-			request.getRequestDispatcher("WEB-INF/jsp/newComment.jsp").forward(request, response);
+			request.getRequestDispatcher("WEB-INF/jsp/newcomment.jsp").forward(request, response);
 		}
 		
 	}

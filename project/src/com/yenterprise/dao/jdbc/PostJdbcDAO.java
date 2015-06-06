@@ -15,14 +15,13 @@ public final class PostJdbcDAO extends AbstractBaseJbdcDAO implements PostDAO {
 	private final static String SELECT_SQL_ALL = "Select postId, createdate, createdby, title, shortdesc, longdesc, updatedby, updateddate from post order by createdate desc;";
 	private final static String UPDATE_SQL = "UPDATE POST SET title=?, shortdesc=?, longdesc=?, updatedby=?, updateddate=? where postId=?";
 	private final static String INSERT_SQL = "INSERT INTO POST (createdate, createdby, title, shortdesc, longdesc, updatedby, updateddate) values (?, ?, ?, ?, ?, ?, ?)";
-	
+	private final static String DELETE_SQL = "DELETE FROM POST WHERE postId=?;";
 	
 public void insert(PostBean post) throws Exception{
 		
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		ResultSet resultSet = null;
-		int result = 0;
 
 		
 		try{
@@ -147,6 +146,30 @@ public void insert(PostBean post) throws Exception{
 			releaseResources(connection, preparedStatement, resultSet);
 		}
 		return result;
+		
+	}
+	
+public void delete(int postId) throws Exception{
+		
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+
+		
+		try{
+			connection = getConnection();
+			preparedStatement = connection.prepareStatement(DELETE_SQL);
+			
+		
+			preparedStatement.setInt(1, postId);
+			preparedStatement.execute();
+			
+
+		
+		}finally{
+			releaseResources(connection, preparedStatement, resultSet);
+		}
+		//return result;
 		
 	}
 	

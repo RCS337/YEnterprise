@@ -5,7 +5,7 @@
     <div class="panel">
         <div class="panel-heading"><h3>Add New Comment</h3></div>
         <div class="panel-body">
-            <form action="./newComment" method="POST" id="commentForm" class="group">
+            <form action="./newcomment" method="POST" id="commentForm" class="group">
                 <div class="field-group">
                     <div class="label">
                         <label for="title">Title <span class="error" id="titleError"><i class="fa fa-exclamation-triangle"></i> Required</span></label>

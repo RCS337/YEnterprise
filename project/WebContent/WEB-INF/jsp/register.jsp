@@ -1,62 +1,19 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <!-- XFN Metadata Profile -->
-    <link rel="profile" href="http://gmpg.org/xfn/11">
-    <!-- mobile specific metadeta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-sclase=1">
-    <!-- specify IE rendering version -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../icons/apple-touch-icon-precomposed.png">
-    <!-- stylesheets-->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-
-</head>
-<body>
-
-<!-- Header Section -->
-<div class="header-wrapper">
-
-    <header id="masthead" class="group">
-        <h1>Y Enterprises</h1>
-        <ul>
-            <li><a href="login.html"><i class="fa fa-sign-in"></i>Login</a></li>
-            <li><a href="register.html"><i class="fa fa-user-plus"></i>Register</a></li>
-        </ul>
-    </header>
-
-</div>
-
-<!-- Tabbed Navigation Section -->
-<div id="nav-wrapper">
-    <nav id="tabbed-nav">
-        <ul>
-            <li><a href="index.html">Comment List</a></li>
-            <li><a href="newComment.html">Add New Comment</a></li>
-            <li><a href="profile.html">User Profile</a></li>
-        </ul>
-    </nav>
-</div>
+<%@ include file="include/header.jsp" %>
 
 <!-- Body Section -->
 <div id="page-wrapper">
     <div class="panel">
         <div class="panel-heading"><h3>Register New User</h3></div>
         <div class="panel-body">
-            <form action="#" method="POST" id="registerForm" class="group">
+       		 ${errorMessage }
+            <form action="/register" method="POST" id="registerForm" class="group">
                 <div class="field-group">
                     <div class="label">
                         <label for="firstName">First Name <span class="error" id="firstNameError"><i class="fa fa-exclamation-triangle"></i> Required</span></label>
                         <p class="label">Your First Name - Required</p>
                     </div>
                     <div class="input">
-                        <input type="text" name="firstName" id="firstName" placeholder="First Name" value="" required>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" value="${retryUser.firstName }" required>
                     </div>
                 </div>
 
@@ -66,7 +23,7 @@
                         <p class="label">Your Last Name - Required</p>
                     </div>
                     <div class="input">
-                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" value="" required>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" value="${retryUser.lastName }" required>
                     </div>
                 </div>
 
@@ -76,7 +33,7 @@
                         <p class="label">A Valid Email - Required</p>
                     </div>
                     <div class="input">
-                        <input type="email" name="email" id="email" placeholder="Email" value="" required>
+                        <input type="email" name="email" id="email" placeholder="Email" value="${retryUser.email }" required>
                     </div>
                 </div>
 
@@ -86,7 +43,7 @@
                         <p class="label">Your Login name - Required</p>
                     </div>
                     <div class="input">
-                        <input type="text" name="userName" id="userName" placeholder="User Name" value="" required>
+                        <input type="text" name="userName" id="userName" placeholder="User Name" value="${retryUser.userName }" required>
                     </div>
                 </div>
 
@@ -117,7 +74,4 @@
     </div><!-- end panel -->
 </div><!-- end page wrapper -->
 
-<script src="js/validate.js"></script>
-<script>init();</script>
-</body>
-</html>
+<%@ include file="include/footer.jsp" %>

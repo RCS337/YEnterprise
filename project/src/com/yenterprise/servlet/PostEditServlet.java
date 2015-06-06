@@ -16,7 +16,7 @@ import com.yenterprise.svc.PostService;
 /**
  * Servlet implementation class PostEditServlet
  */
-@WebServlet("/PostEditServlet")
+@WebServlet("/edit")
 public class PostEditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private PostService service;

@@ -30,11 +30,38 @@ public final class PostService {
 			user=userDAO.login(user);
 		}catch (Exception ex){
 			ex.printStackTrace();
+			
 		}
 		return user;
 	}
 	
+	public UserBean userRegister(UserBean user){
+		
+		try{
+			user=userDAO.insert(user);
+		}catch (Exception ex){
+			//ex.printStackTrace();
+			//user.setFirstName(ex.toString());
+			user=null;
+		}
+		return user;
+	}
 	
+public String userUpdate(UserBean user){
+		int retInt = 0;
+		String errorMessage = "";
+		try{
+			retInt=userDAO.update(user);
+			if (retInt==0){
+				errorMessage = "Your User Record has not been updated";
+			}
+		}catch (Exception ex){
+			//ex.printStackTrace();
+			//retInt=-1;
+			errorMessage = ex.toString();
+		}
+		return errorMessage;
+	}
 	
 	public PostBean getPost(int postId){
 		PostBean post=new PostBean();
@@ -90,5 +117,14 @@ public final class PostService {
 				return false;
 			}
 	}
-	
+
+	public boolean deletePost(int postId){
+		try{
+			postDAO.delete(postId);
+				return true;
+			}catch (Exception ex){
+				//ex.printStackTrace();
+				return false;
+			}
+	}
 }

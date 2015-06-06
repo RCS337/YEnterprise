@@ -12,7 +12,7 @@
         <p>${post.shortDesc }</p>
         <p>${post.longDesc }</p>
         <!-- End stock content -->
-        <p class="admin-links"><a href="edit?postId=${post.postId}">Edit</a> | <a href="delete?postId=${post.postId}">Delete</a></p>
+        <p class=" ${(user != null) ?"admin-links" : "hidden"}"><a href="edit?postId=${post.postId}">Edit</a> | <a href="delete?postId=${post.postId}">Delete</a></p>
 
         </div><!-- end panel-body -->
     </div><!-- end panel -->

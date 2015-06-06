@@ -38,7 +38,7 @@
     <nav id="tabbed-nav">
         <ul>
             <li><a href="posts" class="${post }">Comment List</a></li>
-            ${(user.firstName != null) ? "<li><a href=\"newComment\" class=\"" : ""}${comment }${(user.firstName != null) ? "\" >Add New Comment</a></li>" :""}
+            ${(user.firstName != null) ? "<li><a href=\"newcomment\" class=\"" : ""}${comment }${(user.firstName != null) ? "\" >Add New Comment</a></li>" :""}
             ${(user.firstName != null) ? "<li><a href=\"profile\" class=\"" : ""}${profile }${(user.firstName != null) ? "\" >User Profile</a></li>" :""}
         </ul>
     </nav>

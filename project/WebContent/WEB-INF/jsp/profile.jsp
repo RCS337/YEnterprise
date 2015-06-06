@@ -5,7 +5,8 @@
     <div class="panel">
         <div class="panel-heading"><h3>User Profile - ${user.firstName } ${user.lastName }</h3></div>
         <div class="panel-body">
-            <form action="#" method="POST" id="registerForm" class="group">
+                ${errorMessage }
+            <form action="profile" method="POST" id="registerForm" class="group">
                 <div class="field-group">
                     <div class="label">
                         <label for="firstName">First Name <span class="error" id="firstNameError"><i class="fa fa-exclamation-triangle"></i> Required</span></label>
@@ -42,7 +43,7 @@
                         <p class="label">Your Login name - Required</p>
                     </div>
                     <div class="input">
-                        <input type="text" name="userName" id="userName" placeholder="User Name" value="${user.userName }" required>
+                        <input type="text" name="userName" id="userName" placeholder="User Name" value="${user.userName }" readonly>
                     </div>
                 </div>
 
@@ -66,7 +67,7 @@
                     </div>
                 </div>
                 <input type="hidden" id="userID" value="${user.userId }">
-                <input type="submit" id="submit" class="floatright" value="Register">
+                <input type="submit" id="submit" class="floatright" value="Update">
                 <a href="./posts" class="button floatright">Cancel</a>
             </form>
         </div><!-- end panel-body -->

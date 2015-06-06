@@ -8,7 +8,7 @@ public interface PostDAO {
 	 
 	public void insert(PostBean post) throws Exception;
 	
-	//public void delete(PostBean post) throws Exception;
+	public void delete(int postId) throws Exception;
 	
 	public PostBean read(int postId) throws Exception;
 	
